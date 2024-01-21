@@ -1,12 +1,8 @@
-FROM python:3.10-slim-buster
+FROM python:3.9
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
+WORKDIR /app
 
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /EvaMaria
-WORKDIR /EvaMaria
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
+COPY . .
+RUN pip3 install -r requirements.txt
+
+CMD python3 bot.py
