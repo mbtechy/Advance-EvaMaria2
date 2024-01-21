@@ -19,18 +19,21 @@ from database.filters_mdb import (
     find_filter,
     get_filters,
 )
-
-import os
-req_channel = int(os.enviorn.get('REQ_CHANNEL','-1002135267666'))
-
+from util.human_readable import humanbytes
+from plugins.settings.settings import OpenSettings
+from plugins.dl_button import ddl_call_back
+from plugins.yt_lazy_dl_btn import youtube_dl_call_back
+from urllib.parse import quote_plus
+from util.file_properties import get_name, get_hash, get_media_file_size
 import logging
-
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.ERROR)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+req_channel = ('REQ_CHANNEL','-1002135267666'))
 BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
+
 
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message): 
