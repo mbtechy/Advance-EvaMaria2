@@ -29,7 +29,7 @@ import logging
 logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-req_channel = ('REQ_CHANNEL','-1002135267666'))
+req_channel = ('REQ_CHANNEL','-1002135267666')
 BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
