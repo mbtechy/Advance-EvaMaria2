@@ -760,7 +760,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("HELLO <a f"https://t.me/{temp.U_NAME}a>\n\n ❌ NOT FOUND IN OUR DB ❌ \n\nCHECK SPELLING OR WAIT TILL <a href=https://t.me/master_champ><b>✨ MB4u ✨</b></a> UPLOADS\n\nEnjoy💐")
+        k = await msg.reply("HELLO <a href="https://t.me/{temp.U_NAME}a>\n\n ❌ NOT FOUND IN OUR DB ❌ \n\nCHECK SPELLING OR WAIT TILL <a href=https://t.me/master_champ><b>✨ MB4u ✨</b></a> UPLOADS\n\nEnjoy💐")
         await asyncio.sleep(10)
         await k.delete()
         return
